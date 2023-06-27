@@ -4,35 +4,24 @@
 
 ## Code Explanation ##
 
-The unibit class contains several methods to perform operations on arrays and find combination pairs based on the target value.
+The provided code performs the following operations:
 
-<h3>firstCombinationPairs(int[] arr, int target)</h3>
+1.`firstCombinationPairs`: This method finds all pairs in the given array arr whose sum or difference is equal to the target value. It utilizes nested loops to check all possible combinations of pairs. If a pair with the desired sum or difference is found, it is added to a list (pa) and a set (paSet) to avoid duplicates. The pairs are then converted into a 2D array and returned.
 
-This method finds all pairs in the given array arr whose sum or difference is equal to the target value. It returns a 2D array of pairs.
+2. `mergeSortedArray`: This method takes a 2D array as input and merges all subarrays into a single sorted array. It utilizes nested loops to iterate over each element in the subarrays and adds them to a list (mergedList). The elements in mergedList are then copied into a new integer array (mergedArray), which is sorted using the Arrays.sort() method. Finally, the sorted array is returned.
 
-<h3>mergeSortedArray(int[][] arr)</h3>
+3. `seComPair`: This method finds all combinations of numbers from a sorted array (nums) that sum up to the target value. It first sorts the array using Arrays.sort(). Then, it calls a recursive backtrack function to generate all valid combinations. The function keeps track of the current combination, and when the target value is reached, the combination is added to a list (combinations). The resulting combinations are converted into a 2D array and returned.
 
-This method merges all the subarrays from the input 2D array arr into a single sorted array. It returns a 1D array.
+4. `doubleTargetValue`: This method doubles the input target value and returns the result.
 
-<h3>seComPair(int[] nums, int target)<h3>
+5. `backtrack`: This is a recursive backtracking function used by the seComPair method to find combinations. It iterates over the sorted array (nums) and checks for valid combinations by comparing the current element with the target value. It avoids duplicates by skipping duplicate elements. When a valid combination is found, it is added to the list of combinations (combinations). The function backtracks by removing the last added element from the current combination and continues the process until all combinations are found.
 
-This method finds all combinations of numbers from the sorted array nums that sum up to the target value. It uses a recursive backtracking approach and returns a 2D array of combinations.
+6. `main`: This is the entry point of the program. It initializes an array (nums) and a target value. It then performs the following steps:
 
-<h3?>doubleTargetValue(int target)</h3>
-This method doubles the target value and returns the result.
-
-<h3>main(String[] args)<h3>
-The main method is the entry point of the program. It demonstrates the usage of the above methods by performing the following steps:
-
-Define an input array nums and a target value.
-Find the first combination pairs using firstCombinationPairs method and print the result.
-Merge the pairs into a single array using mergeSortedArray method and print the result.
-Double the target value using doubleTargetValue method and print the result.
-Find the second combination pairs using seComPair method with the doubled target value and print the result.
-This code provides functionality to find combination pairs and perform operations on arrays. It can be used as a starting point for further development or as a reference for understanding the concepts and techniques used in the code.
-
-
-
+- Finds the first combination pairs using the firstCombinationPairs method and prints the result.
+- Merges the pairs into a single array and sorts it using the mergeSortedArray method, then prints the result.
+- Doubles the target value using the doubleTargetValue method and prints the result.
+- Finds the second combination pairs using the doubled target value and the seComPair method, then prints the result.
 
 
 
