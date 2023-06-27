@@ -86,7 +86,7 @@ public class unibit {
             }
 
             int num = nums[i];
-            if (num > target) {
+            if (target < num) {
                 break;
             }
 
